@@ -84,7 +84,7 @@ class SeleniumHelper {
     }
 
     findByText (text, scope) {
-        return this.findByXpath(`//body//${scope || '*'}//*[contains(text(), '${text}')]`);
+        return this.findByXpath(`//${scope || '*'}//*[contains(text(), '${text}')]`);
     }
 
     loadUri (uri) {
@@ -99,7 +99,10 @@ class SeleniumHelper {
                 this.driver.manage()
                     .window()
                     .setSize(WINDOW_WIDTH, WINDOW_HEIGHT)
-            ));
+            ))
+            .then(async () => {
+                await this.clickXpath('//body');
+            });
     }
 
     clickXpath (xpath) {

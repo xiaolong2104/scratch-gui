@@ -431,7 +431,7 @@ const ProjectSaverHOC = function (WrappedComponent) {
             isUpdating: getIsUpdating(loadingState),
             isManualUpdating: getIsManualUpdating(loadingState),
             loadingState: loadingState,
-            locale: state.locales.locale,
+            locale: state.locales && state.locales.locale,
             projectChanged: state.scratchGui.projectChanged,
             reduxProjectId: state.scratchGui.projectState.projectId,
             reduxProjectTitle: state.scratchGui.projectTitle,

@@ -147,7 +147,7 @@ LibraryItemComponent.propTypes = {
     extensionId: PropTypes.string,
     featured: PropTypes.bool,
     hidden: PropTypes.bool,
-    iconSource: ScratchImage.propTypes.imageSource,
+    iconSource: ScratchImage.ImageSourcePropType,
     insetIconURL: PropTypes.string,
     internetConnectionRequired: PropTypes.bool,
     name: PropTypes.oneOfType([

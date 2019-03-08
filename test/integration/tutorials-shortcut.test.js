@@ -23,16 +23,21 @@ describe('Working with shortcut to Tutorials library', () => {
     });
 
     test('opens with the Tutorial Library showing', async () => {
+        console.log('a', uri);
         await loadUri(uri);
         // make sure there is a tutorial visible that doesn't have a shortcut
-        await clickText('Make It Spin');
+        console.log('b');
+        await clickText('Create Animations That Talk');
+        console.log('c');
         await findByXpath('//div[contains(@class, "step-video")]');
+        console.log('d');
     });
-
+/*
     test('can open hidden tutorials', async () => {
         await loadUri(`${uriPrefix}whatsnew`);
         // should open the tutorial video immediately
         await findByXpath('//div[contains(@class, "step-video")]');
     });
+*/
     // @todo navigating cards, etc.
 });
